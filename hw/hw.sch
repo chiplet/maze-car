@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:hw-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,196 +15,43 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A?
-U 1 1 5C7F9D1E
-P 3600 4050
-F 0 "A?" H 3600 2964 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 3600 2873 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 3750 3100 50  0001 L CNN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3600 3050 50  0001 C CNN
-	1    3600 4050
+L Connector:Conn_01x03_Female J4
+U 1 1 5C7FA2DF
+P 8750 3300
+F 0 "J4" H 8643 2975 50  0000 C CNN
+F 1 "Distance sensor 1" H 8643 3066 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8750 3300 50  0001 C CNN
+F 3 "~" H 8750 3300 50  0001 C CNN
+	1    8750 3300
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5C7FAC02
+P 8550 3700
+F 0 "#PWR021" H 8550 3450 50  0001 C CNN
+F 1 "GND" H 8600 3550 50  0000 R CNN
+F 2 "" H 8550 3700 50  0001 C CNN
+F 3 "" H 8550 3700 50  0001 C CNN
+	1    8550 3700
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5C7FA2DF
-P 5150 4150
-F 0 "J?" H 5043 3825 50  0000 C CNN
-F 1 "Distance sensor 1" H 5043 3916 50  0000 C CNN
-F 2 "" H 5150 4150 50  0001 C CNN
-F 3 "~" H 5150 4150 50  0001 C CNN
-	1    5150 4150
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5C7FA4A6
-P 5150 4650
-F 0 "J?" H 5043 4325 50  0000 C CNN
-F 1 "Distance sensor 2" H 5043 4416 50  0000 C CNN
-F 2 "" H 5150 4650 50  0001 C CNN
-F 3 "~" H 5150 4650 50  0001 C CNN
-	1    5150 4650
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5C7FA4E4
-P 5150 5150
-F 0 "J?" H 5043 4825 50  0000 C CNN
-F 1 "Distance sensor 3" H 5043 4916 50  0000 C CNN
-F 2 "" H 5150 5150 50  0001 C CNN
-F 3 "~" H 5150 5150 50  0001 C CNN
-	1    5150 5150
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	4100 4150 4600 4150
-Wire Wire Line
-	4600 4150 4600 4550
-Wire Wire Line
-	4600 4550 4950 4550
-Wire Wire Line
-	4500 4250 4500 5050
-Wire Wire Line
-	4500 5050 4950 5050
-$Comp
-L power:GND #PWR?
-U 1 1 5C7FAC02
-P 4950 4250
-F 0 "#PWR?" H 4950 4000 50  0001 C CNN
-F 1 "GND" V 4955 4122 50  0000 R CNN
-F 2 "" H 4950 4250 50  0001 C CNN
-F 3 "" H 4950 4250 50  0001 C CNN
-	1    4950 4250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C7FAC60
-P 4950 4750
-F 0 "#PWR?" H 4950 4500 50  0001 C CNN
-F 1 "GND" V 4955 4622 50  0000 R CNN
-F 2 "" H 4950 4750 50  0001 C CNN
-F 3 "" H 4950 4750 50  0001 C CNN
-	1    4950 4750
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C7FAC8F
-P 4950 5250
-F 0 "#PWR?" H 4950 5000 50  0001 C CNN
-F 1 "GND" V 4955 5122 50  0000 R CNN
-F 2 "" H 4950 5250 50  0001 C CNN
-F 3 "" H 4950 5250 50  0001 C CNN
-	1    4950 5250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4100 4250 4500 4250
-Wire Wire Line
-	4100 4050 4950 4050
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5C7FB4E4
-P 5150 5650
-F 0 "J?" H 5043 5325 50  0000 C CNN
-F 1 "Distance sensor 4" H 5043 5416 50  0000 C CNN
-F 2 "" H 5150 5650 50  0001 C CNN
-F 3 "~" H 5150 5650 50  0001 C CNN
-	1    5150 5650
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5C7FB4EB
-P 5150 6150
-F 0 "J?" H 5043 5825 50  0000 C CNN
-F 1 "Distance sensor 5" H 5043 5916 50  0000 C CNN
-F 2 "" H 5150 6150 50  0001 C CNN
-F 3 "~" H 5150 6150 50  0001 C CNN
-	1    5150 6150
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5C7FB4F2
-P 5150 6650
-F 0 "J?" H 5043 6325 50  0000 C CNN
-F 1 "Distance sensor 6" H 5043 6416 50  0000 C CNN
-F 2 "" H 5150 6650 50  0001 C CNN
-F 3 "~" H 5150 6650 50  0001 C CNN
-	1    5150 6650
-	1    0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C7FB4FE
-P 4950 5750
-F 0 "#PWR?" H 4950 5500 50  0001 C CNN
-F 1 "GND" V 4955 5622 50  0000 R CNN
-F 2 "" H 4950 5750 50  0001 C CNN
-F 3 "" H 4950 5750 50  0001 C CNN
-	1    4950 5750
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C7FB504
-P 4950 6250
-F 0 "#PWR?" H 4950 6000 50  0001 C CNN
-F 1 "GND" V 4955 6122 50  0000 R CNN
-F 2 "" H 4950 6250 50  0001 C CNN
-F 3 "" H 4950 6250 50  0001 C CNN
-	1    4950 6250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C7FB50A
-P 4950 6750
-F 0 "#PWR?" H 4950 6500 50  0001 C CNN
-F 1 "GND" V 4955 6622 50  0000 R CNN
-F 2 "" H 4950 6750 50  0001 C CNN
-F 3 "" H 4950 6750 50  0001 C CNN
-	1    4950 6750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4100 4350 4400 4350
-Wire Wire Line
-	4400 4350 4400 5550
-Wire Wire Line
-	4400 5550 4950 5550
-Wire Wire Line
-	4100 4450 4300 4450
-Wire Wire Line
-	4300 4450 4300 6050
-Wire Wire Line
-	4300 6050 4950 6050
-Wire Wire Line
-	4100 4550 4200 4550
-Wire Wire Line
-	4200 4550 4200 6550
-Wire Wire Line
-	4200 6550 4950 6550
-$Comp
-L Device:Battery_Cell BT?
+L Device:Battery_Cell BT1
 U 1 1 5C7FC088
 P 950 2450
-F 0 "BT?" H 1068 2546 50  0000 L CNN
+F 0 "BT1" H 1068 2546 50  0000 L CNN
 F 1 "Battery_Cell" H 1068 2455 50  0000 L CNN
-F 2 "" V 950 2510 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" V 950 2510 50  0001 C CNN
 F 3 "~" V 950 2510 50  0001 C CNN
 	1    950  2450
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 5C7FC741
 P 950 2550
-F 0 "#PWR?" H 950 2300 50  0001 C CNN
+F 0 "#PWR03" H 950 2300 50  0001 C CNN
 F 1 "GND" H 955 2377 50  0000 C CNN
 F 2 "" H 950 2550 50  0001 C CNN
 F 3 "" H 950 2550 50  0001 C CNN
@@ -211,10 +59,10 @@ F 3 "" H 950 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR01
 U 1 1 5C7FC8BB
 P 950 950
-F 0 "#PWR?" H 950 700 50  0001 C CNN
+F 0 "#PWR01" H 950 700 50  0001 C CNN
 F 1 "GND" H 955 777 50  0000 C CNN
 F 2 "" H 950 950 50  0001 C CNN
 F 3 "" H 950 950 50  0001 C CNN
@@ -222,10 +70,10 @@ F 3 "" H 950 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG01
 U 1 1 5C7FC96F
 P 950 950
-F 0 "#FLG?" H 950 1025 50  0001 C CNN
+F 0 "#FLG01" H 950 1025 50  0001 C CNN
 F 1 "PWR_FLAG" H 950 1124 50  0000 C CNN
 F 2 "" H 950 950 50  0001 C CNN
 F 3 "~" H 950 950 50  0001 C CNN
@@ -233,10 +81,10 @@ F 3 "~" H 950 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+9V #PWR?
+L power:+9V #PWR04
 U 1 1 5C7FCA92
 P 1400 950
-F 0 "#PWR?" H 1400 800 50  0001 C CNN
+F 0 "#PWR04" H 1400 800 50  0001 C CNN
 F 1 "+9V" H 1415 1123 50  0000 C CNN
 F 2 "" H 1400 950 50  0001 C CNN
 F 3 "" H 1400 950 50  0001 C CNN
@@ -244,10 +92,10 @@ F 3 "" H 1400 950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG02
 U 1 1 5C7FD05A
 P 1400 950
-F 0 "#FLG?" H 1400 1025 50  0001 C CNN
+F 0 "#FLG02" H 1400 1025 50  0001 C CNN
 F 1 "PWR_FLAG" H 1400 1124 50  0000 C CNN
 F 2 "" H 1400 950 50  0001 C CNN
 F 3 "~" H 1400 950 50  0001 C CNN
@@ -255,10 +103,10 @@ F 3 "~" H 1400 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+9V #PWR?
+L power:+9V #PWR02
 U 1 1 5C7FD46C
 P 950 2250
-F 0 "#PWR?" H 950 2100 50  0001 C CNN
+F 0 "#PWR02" H 950 2100 50  0001 C CNN
 F 1 "+9V" H 965 2423 50  0000 C CNN
 F 2 "" H 950 2250 50  0001 C CNN
 F 3 "" H 950 2250 50  0001 C CNN
@@ -266,80 +114,661 @@ F 3 "" H 950 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR011
 U 1 1 5C7FD730
-P 3800 3050
-F 0 "#PWR?" H 3800 2900 50  0001 C CNN
-F 1 "+5V" H 3815 3223 50  0000 C CNN
-F 2 "" H 3800 3050 50  0001 C CNN
-F 3 "" H 3800 3050 50  0001 C CNN
-	1    3800 3050
+P 4400 2800
+F 0 "#PWR011" H 4400 2650 50  0001 C CNN
+F 1 "+5V" H 4415 2973 50  0000 C CNN
+F 2 "" H 4400 2800 50  0001 C CNN
+F 3 "" H 4400 2800 50  0001 C CNN
+	1    4400 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5C7FDB7A
-P 4950 4150
-F 0 "#PWR?" H 4950 4000 50  0001 C CNN
-F 1 "+5V" V 4965 4278 50  0000 L CNN
-F 2 "" H 4950 4150 50  0001 C CNN
-F 3 "" H 4950 4150 50  0001 C CNN
-	1    4950 4150
-	0    -1   -1   0   
+L Device:R R2
+U 1 1 5C8021DE
+P 7900 3350
+F 0 "R2" H 7750 3300 50  0000 L CNN
+F 1 "100k" H 7970 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7830 3350 50  0001 C CNN
+F 3 "~" H 7900 3350 50  0001 C CNN
+	1    7900 3350
+	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5C7FDC9D
-P 4950 4650
-F 0 "#PWR?" H 4950 4500 50  0001 C CNN
-F 1 "+5V" V 4965 4778 50  0000 L CNN
-F 2 "" H 4950 4650 50  0001 C CNN
-F 3 "" H 4950 4650 50  0001 C CNN
-	1    4950 4650
-	0    -1   -1   0   
+L power:GND #PWR018
+U 1 1 5C802273
+P 7900 3500
+F 0 "#PWR018" H 7900 3250 50  0001 C CNN
+F 1 "GND" H 7950 3350 50  0000 R CNN
+F 2 "" H 7900 3500 50  0001 C CNN
+F 3 "" H 7900 3500 50  0001 C CNN
+	1    7900 3500
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5C7FDD10
-P 4950 5150
-F 0 "#PWR?" H 4950 5000 50  0001 C CNN
-F 1 "+5V" V 4965 5278 50  0000 L CNN
-F 2 "" H 4950 5150 50  0001 C CNN
-F 3 "" H 4950 5150 50  0001 C CNN
-	1    4950 5150
-	0    -1   -1   0   
+L Device:R R5
+U 1 1 5C8022E9
+P 8550 3550
+F 0 "R5" H 8620 3596 50  0000 L CNN
+F 1 "56" H 8620 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8480 3550 50  0001 C CNN
+F 3 "~" H 8550 3550 50  0001 C CNN
+	1    8550 3550
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5C7FDD6B
+L Connector:Conn_01x03_Female J5
+U 1 1 5C802A32
+P 8750 4350
+F 0 "J5" H 8643 4025 50  0000 C CNN
+F 1 "Distance sensor 2" H 8643 4116 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8750 4350 50  0001 C CNN
+F 3 "~" H 8750 4350 50  0001 C CNN
+	1    8750 4350
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5C802A39
+P 8550 4750
+F 0 "#PWR022" H 8550 4500 50  0001 C CNN
+F 1 "GND" H 8600 4600 50  0000 R CNN
+F 2 "" H 8550 4750 50  0001 C CNN
+F 3 "" H 8550 4750 50  0001 C CNN
+	1    8550 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5C802A45
+P 7900 4400
+F 0 "R3" H 7750 4350 50  0000 L CNN
+F 1 "100k" H 7970 4355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7830 4400 50  0001 C CNN
+F 3 "~" H 7900 4400 50  0001 C CNN
+	1    7900 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5C802A4C
+P 7900 4550
+F 0 "#PWR019" H 7900 4300 50  0001 C CNN
+F 1 "GND" H 7950 4400 50  0000 R CNN
+F 2 "" H 7900 4550 50  0001 C CNN
+F 3 "" H 7900 4550 50  0001 C CNN
+	1    7900 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5C802A52
+P 8550 4600
+F 0 "R6" H 8620 4646 50  0000 L CNN
+F 1 "56" H 8620 4555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8480 4600 50  0001 C CNN
+F 3 "~" H 8550 4600 50  0001 C CNN
+	1    8550 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J3
+U 1 1 5C802C20
+P 8700 5400
+F 0 "J3" H 8593 5075 50  0000 C CNN
+F 1 "Distance sensor 3" H 8593 5166 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8700 5400 50  0001 C CNN
+F 3 "~" H 8700 5400 50  0001 C CNN
+	1    8700 5400
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5C802C27
+P 8500 5800
+F 0 "#PWR020" H 8500 5550 50  0001 C CNN
+F 1 "GND" H 8550 5650 50  0000 R CNN
+F 2 "" H 8500 5800 50  0001 C CNN
+F 3 "" H 8500 5800 50  0001 C CNN
+	1    8500 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C802C33
+P 7850 5450
+F 0 "R1" H 7700 5400 50  0000 L CNN
+F 1 "100k" H 7920 5405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 5450 50  0001 C CNN
+F 3 "~" H 7850 5450 50  0001 C CNN
+	1    7850 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5C802C3A
+P 7850 5600
+F 0 "#PWR017" H 7850 5350 50  0001 C CNN
+F 1 "GND" H 7900 5450 50  0000 R CNN
+F 2 "" H 7850 5600 50  0001 C CNN
+F 3 "" H 7850 5600 50  0001 C CNN
+	1    7850 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5C802C40
+P 8500 5650
+F 0 "R4" H 8570 5696 50  0000 L CNN
+F 1 "56" H 8570 5605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8430 5650 50  0001 C CNN
+F 3 "~" H 8500 5650 50  0001 C CNN
+	1    8500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J7
+U 1 1 5C8032C0
+P 10550 3300
+F 0 "J7" H 10443 2975 50  0000 C CNN
+F 1 "Distance sensor 4" H 10443 3066 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 10550 3300 50  0001 C CNN
+F 3 "~" H 10550 3300 50  0001 C CNN
+	1    10550 3300
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 5C8032C7
+P 10350 3700
+F 0 "#PWR027" H 10350 3450 50  0001 C CNN
+F 1 "GND" H 10400 3550 50  0000 R CNN
+F 2 "" H 10350 3700 50  0001 C CNN
+F 3 "" H 10350 3700 50  0001 C CNN
+	1    10350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5C8032D3
+P 9700 3350
+F 0 "R8" H 9550 3300 50  0000 L CNN
+F 1 "100k" H 9770 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9630 3350 50  0001 C CNN
+F 3 "~" H 9700 3350 50  0001 C CNN
+	1    9700 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5C8032DA
+P 9700 3500
+F 0 "#PWR024" H 9700 3250 50  0001 C CNN
+F 1 "GND" H 9750 3350 50  0000 R CNN
+F 2 "" H 9700 3500 50  0001 C CNN
+F 3 "" H 9700 3500 50  0001 C CNN
+	1    9700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5C8032E0
+P 10350 3550
+F 0 "R11" H 10420 3596 50  0000 L CNN
+F 1 "56" H 10420 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 10280 3550 50  0001 C CNN
+F 3 "~" H 10350 3550 50  0001 C CNN
+	1    10350 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J8
+U 1 1 5C8032E8
+P 10550 4350
+F 0 "J8" H 10443 4025 50  0000 C CNN
+F 1 "Distance sensor 5" H 10443 4116 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 10550 4350 50  0001 C CNN
+F 3 "~" H 10550 4350 50  0001 C CNN
+	1    10550 4350
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 5C8032EF
+P 10350 4750
+F 0 "#PWR028" H 10350 4500 50  0001 C CNN
+F 1 "GND" H 10400 4600 50  0000 R CNN
+F 2 "" H 10350 4750 50  0001 C CNN
+F 3 "" H 10350 4750 50  0001 C CNN
+	1    10350 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5C8032FB
+P 9700 4400
+F 0 "R9" H 9550 4350 50  0000 L CNN
+F 1 "100k" H 9770 4355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9630 4400 50  0001 C CNN
+F 3 "~" H 9700 4400 50  0001 C CNN
+	1    9700 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5C803302
+P 9700 4550
+F 0 "#PWR025" H 9700 4300 50  0001 C CNN
+F 1 "GND" H 9750 4400 50  0000 R CNN
+F 2 "" H 9700 4550 50  0001 C CNN
+F 3 "" H 9700 4550 50  0001 C CNN
+	1    9700 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5C803308
+P 10350 4600
+F 0 "R12" H 10420 4646 50  0000 L CNN
+F 1 "56" H 10420 4555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 10280 4600 50  0001 C CNN
+F 3 "~" H 10350 4600 50  0001 C CNN
+	1    10350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J6
+U 1 1 5C803310
+P 10500 5400
+F 0 "J6" H 10393 5075 50  0000 C CNN
+F 1 "Distance sensor 6" H 10393 5166 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 10500 5400 50  0001 C CNN
+F 3 "~" H 10500 5400 50  0001 C CNN
+	1    10500 5400
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 5C803317
+P 10300 5800
+F 0 "#PWR026" H 10300 5550 50  0001 C CNN
+F 1 "GND" H 10350 5650 50  0000 R CNN
+F 2 "" H 10300 5800 50  0001 C CNN
+F 3 "" H 10300 5800 50  0001 C CNN
+	1    10300 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5C803323
+P 9650 5450
+F 0 "R7" H 9500 5400 50  0000 L CNN
+F 1 "100k" H 9720 5405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9580 5450 50  0001 C CNN
+F 3 "~" H 9650 5450 50  0001 C CNN
+	1    9650 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 5C80332A
+P 9650 5600
+F 0 "#PWR023" H 9650 5350 50  0001 C CNN
+F 1 "GND" H 9700 5450 50  0000 R CNN
+F 2 "" H 9650 5600 50  0001 C CNN
+F 3 "" H 9650 5600 50  0001 C CNN
+	1    9650 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5C803330
+P 10300 5650
+F 0 "R10" H 10370 5696 50  0000 L CNN
+F 1 "56" H 10370 5605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 10230 5650 50  0001 C CNN
+F 3 "~" H 10300 5650 50  0001 C CNN
+	1    10300 5650
+	1    0    0    -1  
+$EndComp
+Text GLabel 7800 3200 0    50   Input ~ 0
+dist-sig-1
+Wire Wire Line
+	7800 3200 7900 3200
+Text GLabel 7800 4250 0    50   Input ~ 0
+dist-sig-2
+Text GLabel 7750 5300 0    50   Input ~ 0
+dist-sig-3
+Text GLabel 9600 3200 0    50   Input ~ 0
+dist-sig-4
+Text GLabel 9600 4250 0    50   Input ~ 0
+dist-sig-5
+Text GLabel 9550 5300 0    50   Input ~ 0
+dist-sig-6
+Wire Wire Line
+	7800 4250 7900 4250
+Wire Wire Line
+	7750 5300 7850 5300
+Wire Wire Line
+	9600 3200 9700 3200
+Wire Wire Line
+	9600 4250 9700 4250
+Wire Wire Line
+	9550 5300 9650 5300
+$Comp
+L 74xx:74HC595 U2
+U 1 1 5C80793E
+P 5100 6250
+F 0 "U2" H 4850 7050 50  0000 C CNN
+F 1 "74HC595" H 4850 6900 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 5100 6250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 5100 6250 50  0001 C CNN
+	1    5100 6250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C807CA2
 P 4950 5650
-F 0 "#PWR?" H 4950 5500 50  0001 C CNN
-F 1 "+5V" V 4965 5778 50  0000 L CNN
-F 2 "" H 4950 5650 50  0001 C CNN
-F 3 "" H 4950 5650 50  0001 C CNN
+F 0 "C1" V 4698 5650 50  0000 C CNN
+F 1 "100n" V 4789 5650 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 4988 5500 50  0001 C CNN
+F 3 "~" H 4950 5650 50  0001 C CNN
 	1    4950 5650
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5C807D7E
+P 4800 5650
+F 0 "#PWR012" H 4800 5400 50  0001 C CNN
+F 1 "GND" V 4805 5522 50  0000 R CNN
+F 2 "" H 4800 5650 50  0001 C CNN
+F 3 "" H 4800 5650 50  0001 C CNN
+	1    4800 5650
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 5C8084D4
+P 5100 5650
+F 0 "#PWR013" H 5100 5500 50  0001 C CNN
+F 1 "+5V" H 5050 5800 50  0000 C CNN
+F 2 "" H 5100 5650 50  0001 C CNN
+F 3 "" H 5100 5650 50  0001 C CNN
+	1    5100 5650
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5100 5650
+Text GLabel 8550 3300 0    50   Input ~ 0
+dist-led-1
+Text GLabel 8550 4350 0    50   Input ~ 0
+dist-led-2
+Text GLabel 8500 5400 0    50   Input ~ 0
+dist-led-3
+Text GLabel 10350 3300 0    50   Input ~ 0
+dist-led-4
+Text GLabel 10350 4350 0    50   Input ~ 0
+dist-led-5
+Text GLabel 10300 5400 0    50   Input ~ 0
+dist-led-6
+Wire Wire Line
+	7900 3200 8550 3200
+Connection ~ 7900 3200
+Wire Wire Line
+	7900 4250 8550 4250
+Connection ~ 7900 4250
+Wire Wire Line
+	7850 5300 8500 5300
+Connection ~ 7850 5300
+Wire Wire Line
+	9700 3200 10350 3200
+Connection ~ 9700 3200
+Wire Wire Line
+	9700 4250 10350 4250
+Connection ~ 9700 4250
+Wire Wire Line
+	9650 5300 10300 5300
+Connection ~ 9650 5300
+Text Notes 7350 2900 0    50   ~ 0
+Distance Sensor connectors
+Wire Notes Line
+	7200 2750 10900 2750
+Wire Notes Line
+	10900 2750 10900 6100
+Wire Notes Line
+	10900 6100 7200 6100
+Wire Notes Line
+	7200 6100 7200 2750
+$Comp
+L power:GND #PWR016
+U 1 1 5C80D793
+P 5500 6450
+F 0 "#PWR016" H 5500 6200 50  0001 C CNN
+F 1 "GND" V 5505 6322 50  0000 R CNN
+F 2 "" H 5500 6450 50  0001 C CNN
+F 3 "" H 5500 6450 50  0001 C CNN
+	1    5500 6450
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+5V #PWR015
+U 1 1 5C80D821
+P 5500 6150
+F 0 "#PWR015" H 5500 6000 50  0001 C CNN
+F 1 "+5V" V 5500 6350 50  0000 C CNN
+F 2 "" H 5500 6150 50  0001 C CNN
+F 3 "" H 5500 6150 50  0001 C CNN
+	1    5500 6150
+	0    1    -1   0   
+$EndComp
+Text GLabel 3700 3400 0    50   Input ~ 0
+dist-led-1
+Text GLabel 3700 3500 0    50   Input ~ 0
+dist-led-2
+Text GLabel 3700 3600 0    50   Input ~ 0
+dist-led-3
+Text GLabel 3700 3700 0    50   Input ~ 0
+dist-led-4
+Text GLabel 3700 3800 0    50   Input ~ 0
+dist-led-5
+Text GLabel 3700 3900 0    50   Input ~ 0
+dist-led-6
+Text GLabel 3700 4300 0    50   Input ~ 0
+595-data
+Text GLabel 3700 4400 0    50   Input ~ 0
+595-clock
+Text GLabel 3700 4000 0    50   Input ~ 0
+595-latch
+Text GLabel 5500 6350 2    50   Input ~ 0
+595-latch
+Text GLabel 5500 5850 2    50   Input ~ 0
+595-data
+Text GLabel 5500 6050 2    50   Input ~ 0
+595-clock
+$Comp
+L power:GND #PWR014
+U 1 1 5C814DE2
+P 5100 6950
+F 0 "#PWR014" H 5100 6700 50  0001 C CNN
+F 1 "GND" H 5105 6777 50  0000 C CNN
+F 2 "" H 5100 6950 50  0001 C CNN
+F 3 "" H 5100 6950 50  0001 C CNN
+	1    5100 6950
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 4700 6750
+NoConn ~ 4700 6550
+NoConn ~ 4700 6450
+NoConn ~ 4200 4800
+$Comp
+L power:GND #PWR010
+U 1 1 5C81527B
+P 4300 4800
+F 0 "#PWR010" H 4300 4550 50  0001 C CNN
+F 1 "GND" H 4150 4750 50  0000 C CNN
+F 2 "" H 4300 4800 50  0001 C CNN
+F 3 "" H 4300 4800 50  0001 C CNN
+	1    4300 4800
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 4700 3600
+NoConn ~ 4700 3300
+NoConn ~ 4700 3200
+NoConn ~ 4300 2800
+$Comp
+L power:+9V #PWR09
+U 1 1 5C815E30
+P 4100 2800
+F 0 "#PWR09" H 4100 2650 50  0001 C CNN
+F 1 "+9V" H 4115 2973 50  0000 C CNN
+F 2 "" H 4100 2800 50  0001 C CNN
+F 3 "" H 4100 2800 50  0001 C CNN
+	1    4100 2800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4700 3800 2    50   Input ~ 0
+dist-sig-1
+Text GLabel 4700 3900 2    50   Input ~ 0
+dist-sig-2
+Text GLabel 4700 4000 2    50   Input ~ 0
+dist-sig-3
+Text GLabel 4700 4100 2    50   Input ~ 0
+dist-sig-4
+Text GLabel 4700 4200 2    50   Input ~ 0
+dist-sig-5
+Text GLabel 4700 4300 2    50   Input ~ 0
+dist-sig-6
+NoConn ~ 4700 4400
+NoConn ~ 4700 4500
+NoConn ~ 4700 6350
+NoConn ~ 4700 6250
+Text GLabel 3700 4500 0    50   Input ~ 0
+motor-stby
+$Comp
+L custom:TB6612FNG_Breakout U1
+U 1 1 5C802B35
+P 3300 5650
+F 0 "U1" H 3325 5775 50  0000 C CNN
+F 1 "TB6612FNG_Breakout" H 3325 5684 50  0000 C CNN
+F 2 "" H 3300 5650 50  0001 C CNN
+F 3 "" H 3300 5650 50  0001 C CNN
+	1    3300 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR05
+U 1 1 5C803D94
+P 2800 5750
+F 0 "#PWR05" H 2800 5600 50  0001 C CNN
+F 1 "+9V" V 2800 5950 50  0000 C CNN
+F 2 "" H 2800 5750 50  0001 C CNN
+F 3 "" H 2800 5750 50  0001 C CNN
+	1    2800 5750
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5C7FDDB6
-P 4950 6150
-F 0 "#PWR?" H 4950 6000 50  0001 C CNN
-F 1 "+5V" V 4965 6278 50  0000 L CNN
-F 2 "" H 4950 6150 50  0001 C CNN
-F 3 "" H 4950 6150 50  0001 C CNN
-	1    4950 6150
-	0    -1   -1   0   
+L power:+5V #PWR06
+U 1 1 5C803FF5
+P 2800 5850
+F 0 "#PWR06" H 2800 5700 50  0001 C CNN
+F 1 "+5V" V 2800 6050 50  0000 C CNN
+F 2 "" H 2800 5850 50  0001 C CNN
+F 3 "" H 2800 5850 50  0001 C CNN
+	1    2800 5850
+	0    -1   1    0   
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5C7FDE09
-P 4950 6650
-F 0 "#PWR?" H 4950 6500 50  0001 C CNN
-F 1 "+5V" V 4965 6778 50  0000 L CNN
-F 2 "" H 4950 6650 50  0001 C CNN
-F 3 "" H 4950 6650 50  0001 C CNN
-	1    4950 6650
-	0    -1   -1   0   
+L power:GND #PWR07
+U 1 1 5C8040F4
+P 2800 5950
+F 0 "#PWR07" H 2800 5700 50  0001 C CNN
+F 1 "GND" V 2800 5750 50  0000 C CNN
+F 2 "" H 2800 5950 50  0001 C CNN
+F 3 "" H 2800 5950 50  0001 C CNN
+	1    2800 5950
+	0    1    -1   0   
 $EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5C7F9D1E
+P 4200 3800
+F 0 "A1" H 4200 2714 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 4200 2623 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4350 2850 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4200 2800 50  0001 C CNN
+	1    4200 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 5750 2    50   Input ~ 0
+PWMA
+Text GLabel 3850 6350 2    50   Input ~ 0
+PWMB
+Text GLabel 3700 4100 0    50   Input ~ 0
+PWMA
+Text GLabel 3700 4200 0    50   Input ~ 0
+PWMB
+NoConn ~ 3700 3200
+NoConn ~ 3700 3300
+NoConn ~ 3850 6450
+$Comp
+L power:GND #PWR08
+U 1 1 5C8073D3
+P 2800 6450
+F 0 "#PWR08" H 2800 6200 50  0001 C CNN
+F 1 "GND" H 2805 6277 50  0000 C CNN
+F 2 "" H 2800 6450 50  0001 C CNN
+F 3 "" H 2800 6450 50  0001 C CNN
+	1    2800 6450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 6050 2    50   Input ~ 0
+motor-stby
+Wire Wire Line
+	4700 5850 3850 5850
+Wire Wire Line
+	4700 5950 3850 5950
+Wire Wire Line
+	4700 6050 4450 6050
+Wire Wire Line
+	4450 6050 4450 6150
+Wire Wire Line
+	4450 6150 3850 6150
+Wire Wire Line
+	4700 6150 4550 6150
+Wire Wire Line
+	4550 6150 4550 6250
+Wire Wire Line
+	4550 6250 3850 6250
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 5C80A222
+P 1850 6050
+F 0 "J1" H 1744 6235 50  0000 C CNN
+F 1 "Motor 1 Connector" H 1744 6144 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1850 6050 50  0001 C CNN
+F 3 "~" H 1850 6050 50  0001 C CNN
+	1    1850 6050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 6050 2050 6050
+Wire Wire Line
+	2050 6150 2800 6150
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 5C80B817
+P 1850 6250
+F 0 "J2" H 1750 5950 50  0000 C CNN
+F 1 "Motor 2 Connector" H 1700 6050 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1850 6250 50  0001 C CNN
+F 3 "~" H 1850 6250 50  0001 C CNN
+	1    1850 6250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 6250 2800 6250
+Wire Wire Line
+	2800 6350 2050 6350
 $EndSCHEMATC
