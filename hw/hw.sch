@@ -116,12 +116,12 @@ $EndComp
 $Comp
 L power:+5V #PWR011
 U 1 1 5C7FD730
-P 4400 2800
-F 0 "#PWR011" H 4400 2650 50  0001 C CNN
-F 1 "+5V" H 4415 2973 50  0000 C CNN
-F 2 "" H 4400 2800 50  0001 C CNN
-F 3 "" H 4400 2800 50  0001 C CNN
-	1    4400 2800
+P 5350 2750
+F 0 "#PWR011" H 5350 2600 50  0001 C CNN
+F 1 "+5V" H 5365 2923 50  0000 C CNN
+F 2 "" H 5350 2750 50  0001 C CNN
+F 3 "" H 5350 2750 50  0001 C CNN
+	1    5350 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -456,51 +456,6 @@ Wire Wire Line
 	9600 4250 9700 4250
 Wire Wire Line
 	9550 5300 9650 5300
-$Comp
-L 74xx:74HC595 U2
-U 1 1 5C80793E
-P 5100 6250
-F 0 "U2" H 4850 7050 50  0000 C CNN
-F 1 "74HC595" H 4850 6900 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 5100 6250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 5100 6250 50  0001 C CNN
-	1    5100 6250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5C807CA2
-P 4950 5650
-F 0 "C1" V 4698 5650 50  0000 C CNN
-F 1 "100n" V 4789 5650 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 4988 5500 50  0001 C CNN
-F 3 "~" H 4950 5650 50  0001 C CNN
-	1    4950 5650
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR012
-U 1 1 5C807D7E
-P 4800 5650
-F 0 "#PWR012" H 4800 5400 50  0001 C CNN
-F 1 "GND" V 4805 5522 50  0000 R CNN
-F 2 "" H 4800 5650 50  0001 C CNN
-F 3 "" H 4800 5650 50  0001 C CNN
-	1    4800 5650
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR013
-U 1 1 5C8084D4
-P 5100 5650
-F 0 "#PWR013" H 5100 5500 50  0001 C CNN
-F 1 "+5V" H 5050 5800 50  0000 C CNN
-F 2 "" H 5100 5650 50  0001 C CNN
-F 3 "" H 5100 5650 50  0001 C CNN
-	1    5100 5650
-	-1   0    0    -1  
-$EndComp
-Connection ~ 5100 5650
 Text GLabel 8550 3300 0    50   Input ~ 0
 dist-led-1
 Text GLabel 8550 4350 0    50   Input ~ 0
@@ -541,234 +496,181 @@ Wire Notes Line
 	10900 6100 7200 6100
 Wire Notes Line
 	7200 6100 7200 2750
-$Comp
-L power:GND #PWR016
-U 1 1 5C80D793
-P 5500 6450
-F 0 "#PWR016" H 5500 6200 50  0001 C CNN
-F 1 "GND" V 5505 6322 50  0000 R CNN
-F 2 "" H 5500 6450 50  0001 C CNN
-F 3 "" H 5500 6450 50  0001 C CNN
-	1    5500 6450
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:+5V #PWR015
-U 1 1 5C80D821
-P 5500 6150
-F 0 "#PWR015" H 5500 6000 50  0001 C CNN
-F 1 "+5V" V 5500 6350 50  0000 C CNN
-F 2 "" H 5500 6150 50  0001 C CNN
-F 3 "" H 5500 6150 50  0001 C CNN
-	1    5500 6150
-	0    1    -1   0   
-$EndComp
-Text GLabel 3700 3400 0    50   Input ~ 0
+Text GLabel 4650 3350 0    50   Input ~ 0
 dist-led-1
-Text GLabel 3700 3500 0    50   Input ~ 0
+Text GLabel 4650 3450 0    50   Input ~ 0
 dist-led-2
-Text GLabel 3700 3600 0    50   Input ~ 0
+Text GLabel 4650 3550 0    50   Input ~ 0
 dist-led-3
-Text GLabel 3700 3700 0    50   Input ~ 0
+Text GLabel 5650 3850 2    50   Input ~ 0
 dist-led-4
-Text GLabel 3700 3800 0    50   Input ~ 0
+Text GLabel 5650 3750 2    50   Input ~ 0
 dist-led-5
-Text GLabel 3700 3900 0    50   Input ~ 0
+Text GLabel 4650 4450 0    50   Input ~ 0
 dist-led-6
-Text GLabel 3700 4300 0    50   Input ~ 0
-595-data
-Text GLabel 3700 4400 0    50   Input ~ 0
-595-clock
-Text GLabel 3700 4000 0    50   Input ~ 0
-595-latch
-Text GLabel 5500 6350 2    50   Input ~ 0
-595-latch
-Text GLabel 5500 5850 2    50   Input ~ 0
-595-data
-Text GLabel 5500 6050 2    50   Input ~ 0
-595-clock
-$Comp
-L power:GND #PWR014
-U 1 1 5C814DE2
-P 5100 6950
-F 0 "#PWR014" H 5100 6700 50  0001 C CNN
-F 1 "GND" H 5105 6777 50  0000 C CNN
-F 2 "" H 5100 6950 50  0001 C CNN
-F 3 "" H 5100 6950 50  0001 C CNN
-	1    5100 6950
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 4700 6750
-NoConn ~ 4700 6550
-NoConn ~ 4700 6450
-NoConn ~ 4200 4800
 $Comp
 L power:GND #PWR010
 U 1 1 5C81527B
-P 4300 4800
-F 0 "#PWR010" H 4300 4550 50  0001 C CNN
-F 1 "GND" H 4150 4750 50  0000 C CNN
-F 2 "" H 4300 4800 50  0001 C CNN
-F 3 "" H 4300 4800 50  0001 C CNN
-	1    4300 4800
+P 5250 4750
+F 0 "#PWR010" H 5250 4500 50  0001 C CNN
+F 1 "GND" H 5100 4650 50  0000 C CNN
+F 2 "" H 5250 4750 50  0001 C CNN
+F 3 "" H 5250 4750 50  0001 C CNN
+	1    5250 4750
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 4700 3600
-NoConn ~ 4700 3300
-NoConn ~ 4700 3200
-NoConn ~ 4300 2800
+NoConn ~ 5650 3550
+NoConn ~ 5650 3250
+NoConn ~ 5650 3150
+NoConn ~ 5250 2750
 $Comp
 L power:+9V #PWR09
 U 1 1 5C815E30
-P 4100 2800
-F 0 "#PWR09" H 4100 2650 50  0001 C CNN
-F 1 "+9V" H 4115 2973 50  0000 C CNN
-F 2 "" H 4100 2800 50  0001 C CNN
-F 3 "" H 4100 2800 50  0001 C CNN
-	1    4100 2800
+P 5050 2750
+F 0 "#PWR09" H 5050 2600 50  0001 C CNN
+F 1 "+9V" H 5065 2923 50  0000 C CNN
+F 2 "" H 5050 2750 50  0001 C CNN
+F 3 "" H 5050 2750 50  0001 C CNN
+	1    5050 2750
 	1    0    0    -1  
 $EndComp
-Text GLabel 4700 3800 2    50   Input ~ 0
+Text GLabel 5650 4250 2    50   Input ~ 0
 dist-sig-1
-Text GLabel 4700 3900 2    50   Input ~ 0
+Text GLabel 5650 4350 2    50   Input ~ 0
 dist-sig-2
-Text GLabel 4700 4000 2    50   Input ~ 0
+Text GLabel 5650 4450 2    50   Input ~ 0
 dist-sig-3
-Text GLabel 4700 4100 2    50   Input ~ 0
+Text GLabel 5650 4150 2    50   Input ~ 0
 dist-sig-4
-Text GLabel 4700 4200 2    50   Input ~ 0
+Text GLabel 5650 4050 2    50   Input ~ 0
 dist-sig-5
-Text GLabel 4700 4300 2    50   Input ~ 0
+Text GLabel 5650 3950 2    50   Input ~ 0
 dist-sig-6
-NoConn ~ 4700 4400
-NoConn ~ 4700 4500
-NoConn ~ 4700 6350
-NoConn ~ 4700 6250
-Text GLabel 3700 4500 0    50   Input ~ 0
-motor-stby
 $Comp
 L custom:TB6612FNG_Breakout U1
 U 1 1 5C802B35
-P 3300 5650
-F 0 "U1" H 3325 5775 50  0000 C CNN
-F 1 "TB6612FNG_Breakout" H 3325 5684 50  0000 C CNN
-F 2 "custom:TB6612FNG breakout" H 3300 5650 50  0001 C CNN
-F 3 "" H 3300 5650 50  0001 C CNN
-	1    3300 5650
+P 3250 3550
+F 0 "U1" H 3275 3675 50  0000 C CNN
+F 1 "TB6612FNG_Breakout" H 3275 3584 50  0000 C CNN
+F 2 "custom:TB6612FNG breakout" H 3250 3550 50  0001 C CNN
+F 3 "" H 3250 3550 50  0001 C CNN
+	1    3250 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+9V #PWR05
 U 1 1 5C803D94
-P 2800 5750
-F 0 "#PWR05" H 2800 5600 50  0001 C CNN
-F 1 "+9V" V 2800 5950 50  0000 C CNN
-F 2 "" H 2800 5750 50  0001 C CNN
-F 3 "" H 2800 5750 50  0001 C CNN
-	1    2800 5750
+P 2750 3650
+F 0 "#PWR05" H 2750 3500 50  0001 C CNN
+F 1 "+9V" V 2750 3850 50  0000 C CNN
+F 2 "" H 2750 3650 50  0001 C CNN
+F 3 "" H 2750 3650 50  0001 C CNN
+	1    2750 3650
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+5V #PWR06
 U 1 1 5C803FF5
-P 2800 5850
-F 0 "#PWR06" H 2800 5700 50  0001 C CNN
-F 1 "+5V" V 2800 6050 50  0000 C CNN
-F 2 "" H 2800 5850 50  0001 C CNN
-F 3 "" H 2800 5850 50  0001 C CNN
-	1    2800 5850
+P 2750 3750
+F 0 "#PWR06" H 2750 3600 50  0001 C CNN
+F 1 "+5V" V 2750 3950 50  0000 C CNN
+F 2 "" H 2750 3750 50  0001 C CNN
+F 3 "" H 2750 3750 50  0001 C CNN
+	1    2750 3750
 	0    -1   1    0   
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5C8040F4
-P 2800 5950
-F 0 "#PWR07" H 2800 5700 50  0001 C CNN
-F 1 "GND" V 2800 5750 50  0000 C CNN
-F 2 "" H 2800 5950 50  0001 C CNN
-F 3 "" H 2800 5950 50  0001 C CNN
-	1    2800 5950
+P 2750 3850
+F 0 "#PWR07" H 2750 3600 50  0001 C CNN
+F 1 "GND" V 2750 3650 50  0000 C CNN
+F 2 "" H 2750 3850 50  0001 C CNN
+F 3 "" H 2750 3850 50  0001 C CNN
+	1    2750 3850
 	0    1    -1   0   
 $EndComp
 $Comp
 L MCU_Module:Arduino_Nano_v3.x A1
 U 1 1 5C7F9D1E
-P 4200 3800
-F 0 "A1" H 4200 2714 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 4200 2623 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 4350 2850 50  0001 L CNN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4200 2800 50  0001 C CNN
-	1    4200 3800
+P 5150 3750
+F 0 "A1" H 5200 2500 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5200 2400 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5300 2800 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5150 2750 50  0001 C CNN
+	1    5150 3750
 	1    0    0    -1  
 $EndComp
-Text GLabel 3850 5750 2    50   Input ~ 0
-PWMA
-Text GLabel 3850 6350 2    50   Input ~ 0
-PWMB
-Text GLabel 3700 4100 0    50   Input ~ 0
-PWMA
-Text GLabel 3700 4200 0    50   Input ~ 0
-PWMB
-NoConn ~ 3700 3200
-NoConn ~ 3700 3300
-NoConn ~ 3850 6450
+NoConn ~ 4650 3150
+NoConn ~ 4650 3250
 $Comp
 L power:GND #PWR08
 U 1 1 5C8073D3
-P 2800 6450
-F 0 "#PWR08" H 2800 6200 50  0001 C CNN
-F 1 "GND" H 2805 6277 50  0000 C CNN
-F 2 "" H 2800 6450 50  0001 C CNN
-F 3 "" H 2800 6450 50  0001 C CNN
-	1    2800 6450
+P 2750 4350
+F 0 "#PWR08" H 2750 4100 50  0001 C CNN
+F 1 "GND" H 2755 4177 50  0000 C CNN
+F 2 "" H 2750 4350 50  0001 C CNN
+F 3 "" H 2750 4350 50  0001 C CNN
+	1    2750 4350
 	1    0    0    -1  
 $EndComp
-Text GLabel 3850 6050 2    50   Input ~ 0
-motor-stby
-Wire Wire Line
-	4700 5850 3850 5850
-Wire Wire Line
-	4700 5950 3850 5950
-Wire Wire Line
-	4700 6050 4450 6050
-Wire Wire Line
-	4450 6050 4450 6150
-Wire Wire Line
-	4450 6150 3850 6150
-Wire Wire Line
-	4700 6150 4550 6150
-Wire Wire Line
-	4550 6150 4550 6250
-Wire Wire Line
-	4550 6250 3850 6250
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5C80A222
-P 1850 6050
-F 0 "J1" H 1744 6235 50  0000 C CNN
-F 1 "Motor 1 Connector" H 1744 6144 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1850 6050 50  0001 C CNN
-F 3 "~" H 1850 6050 50  0001 C CNN
-	1    1850 6050
+P 1800 3950
+F 0 "J1" H 1694 4135 50  0000 C CNN
+F 1 "Motor 1 Connector" H 1694 4044 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1800 3950 50  0001 C CNN
+F 3 "~" H 1800 3950 50  0001 C CNN
+	1    1800 3950
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 6050 2050 6050
+	2750 3950 2000 3950
 Wire Wire Line
-	2050 6150 2800 6150
+	2000 4050 2750 4050
 $Comp
 L Connector:Conn_01x02_Female J2
 U 1 1 5C80B817
-P 1850 6250
-F 0 "J2" H 1750 5950 50  0000 C CNN
-F 1 "Motor 2 Connector" H 1700 6050 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1850 6250 50  0001 C CNN
-F 3 "~" H 1850 6250 50  0001 C CNN
-	1    1850 6250
+P 1800 4150
+F 0 "J2" H 1700 3850 50  0000 C CNN
+F 1 "Motor 2 Connector" H 1650 3950 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1800 4150 50  0001 C CNN
+F 3 "~" H 1800 4150 50  0001 C CNN
+	1    1800 4150
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 6250 2800 6250
+	2000 4150 2750 4150
 Wire Wire Line
-	2800 6350 2050 6350
+	2750 4250 2000 4250
+Wire Wire Line
+	3800 3650 4650 3650
+Wire Wire Line
+	3800 4250 4650 4250
+Wire Wire Line
+	3800 3750 4650 3750
+Wire Wire Line
+	4650 3850 3800 3850
+Wire Wire Line
+	4650 3950 3800 3950
+Wire Wire Line
+	3800 4050 4650 4050
+Wire Wire Line
+	4650 4150 3800 4150
+$Comp
+L power:GND #PWR0101
+U 1 1 5C839DF9
+P 3800 4350
+F 0 "#PWR0101" H 3800 4100 50  0001 C CNN
+F 1 "GND" H 3805 4177 50  0000 C CNN
+F 2 "" H 3800 4350 50  0001 C CNN
+F 3 "" H 3800 4350 50  0001 C CNN
+	1    3800 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4750 5250 4750
+Connection ~ 5250 4750
+NoConn ~ 4650 4350
 $EndSCHEMATC
