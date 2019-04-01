@@ -1,5 +1,7 @@
 #include <ArduinoSTL.h>
 
+
+
 // print adc readings from all distance sensor pins
 void print_sensors()
 {
@@ -49,5 +51,21 @@ void set_motor_speed(enum motors motor, float value)
     digitalWrite(BIN1, bin1);
     digitalWrite(BIN2, bin2);
     analogWrite(PWMB, value*255);
+  }
+}
+
+// TODO change implementation to store recorded values to an array
+// call this function from a timer interffupt (restructure for that) so that it is continuously updating the distance values
+// the measure_distance functions should then just get the corresponding value from the array
+void test_sensors(const int* sensor_pins, const int* led_pins, int sensor_index, int n_sensor_pins)
+{
+  for (int i = 0; i < n_sensor_pins; i++)
+  {
+    digitalWrite(led_pins[i], HIGH);
+    delay(10);
+    int reading = analogRead(sensor_pins[i]);
+    delay(40);
+    digitalWrite(led_pins[i], LOW);
+    delay(200);
   }
 }
