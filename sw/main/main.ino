@@ -143,38 +143,66 @@ float mean(int* arr, int arrlen)
   return sum / arrlen;
 }
 
-float left_speed = 0.3;
-float right_speed = 0.3;
-float multiplier = 0.7;
+void flush_serial(){
+  while(Serial.available() > 0) {
+    char t = Serial.read();
+  }
+}   
+
+// frame format, start byte 'b' followed by four bytes indicating key states (ascii '1' for on, anything else for off
+
+float left_speed = 0.0f;
+float right_speed = 0.0f;
+
+char buf[10];
 
 void loop() {
-  const float freq = 0.1f;
-  float a = sin(2*PI*millis()/1000.0f*freq);
+  while (!Serial.available());
+  char state = Serial.read();
 
-  printf("Sensor readings: %3d %3d %3d %3d %3d %3d\n", sensor_readings[0], sensor_readings[1], sensor_readings[2], sensor_readings[3], sensor_readings[4], sensor_readings[5]);
+  char w = state & 1 << 3;
+  char a = state & 1 << 2;
+  char s = state & 1 << 1;
+  char d = state & 1 << 0;
 
-  float mean_dist = mean(sensor_readings, 6);
-  int max_i = max_index(sensor_readings, 6);
+  char spd = state >> 4;
+  float f_speed = (float)spd/16.0f;
 
-  float left_adjust;
-  float right_adjust;
+  /*
+  Serial.print(w ? '1' : '0');
+  Serial.print(a ? '1' : '0');
+  Serial.print(s ? '1' : '0');
+  Serial.print(d ? '1' : '0');
+  Serial.println();
+  */
 
-  if (max_i == 2)
+  flush_serial();
+
+  left_speed = 0.0f;
+  right_speed = 0.0f;
+  if (w)
   {
-    left_adjust = 1.1;
-    right_adjust = 0.9;
+    left_speed += f_speed;
+    right_speed += f_speed;
   }
-
-  if (max_i == 0)
+  if (a)
   {
-    right_adjust = 1.1;
-    left_adjust = 0.9;
+    left_speed -= f_speed;
+    right_speed += f_speed;
   }
-
-  // Serial.println(left_adjust);
+  if (s)
+  {
+    left_speed -= f_speed;
+    right_speed -= f_speed;
+  }
+  if (d)
+  {
+    left_speed += f_speed;
+    right_speed -= f_speed;
+  }
   
-  set_motor_speed(M_LEFT, left_speed*left_adjust);
-  set_motor_speed(M_RIGHT, right_speed*right_adjust);
+  set_motor_speed(M_LEFT, left_speed);
+  set_motor_speed(M_RIGHT, right_speed);
 
-  delay(100);
+  delay(1);
 }
