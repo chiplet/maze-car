@@ -19,7 +19,7 @@ L Connector:Conn_01x03_Female J4
 U 1 1 5C7FA2DF
 P 8800 3300
 F 0 "J4" H 8693 2975 50  0000 C CNN
-F 1 "Distance sensor 1" H 8693 3066 50  0000 C CNN
+F 1 "sensor 1" H 8693 3066 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8800 3300 50  0001 C CNN
 F 3 "~" H 8800 3300 50  0001 C CNN
 	1    8800 3300
@@ -41,7 +41,7 @@ L Device:Battery_Cell BT1
 U 1 1 5C7FC088
 P 750 1450
 F 0 "BT1" H 868 1546 50  0000 L CNN
-F 1 "Battery_Cell" H 868 1455 50  0000 L CNN
+F 1 "Battery" H 868 1455 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" V 750 1510 50  0001 C CNN
 F 3 "~" V 750 1510 50  0001 C CNN
 	1    750  1450
@@ -330,7 +330,7 @@ L Connector:Conn_01x02_Male J6
 U 1 1 5CAE00E3
 P 4150 3150
 F 0 "J6" H 4256 3328 50  0000 C CNN
-F 1 "Serial pin header" H 4250 3250 50  0000 C CNN
+F 1 "TX/RX" H 4250 3250 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4150 3150 50  0001 C CNN
 F 3 "~" H 4150 3150 50  0001 C CNN
 	1    4150 3150
@@ -507,7 +507,7 @@ L Connector:Conn_01x03_Female J3
 U 1 1 5CB0FFA8
 P 8800 4300
 F 0 "J3" H 8693 3975 50  0000 C CNN
-F 1 "Distance sensor 2" H 8693 4066 50  0000 C CNN
+F 1 "sensor 2" H 8693 4066 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8800 4300 50  0001 C CNN
 F 3 "~" H 8800 4300 50  0001 C CNN
 	1    8800 4300
@@ -602,7 +602,7 @@ L Connector:Conn_01x03_Female J5
 U 1 1 5CB10C95
 P 8800 5300
 F 0 "J5" H 8693 4975 50  0000 C CNN
-F 1 "Distance sensor 3" H 8693 5066 50  0000 C CNN
+F 1 "sensor 3" H 8693 5066 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8800 5300 50  0001 C CNN
 F 3 "~" H 8800 5300 50  0001 C CNN
 	1    8800 5300
@@ -699,7 +699,7 @@ L Connector:Conn_01x03_Female J7
 U 1 1 5CB122CD
 P 10600 3300
 F 0 "J7" H 10493 2975 50  0000 C CNN
-F 1 "Distance sensor 4" H 10493 3066 50  0000 C CNN
+F 1 "sensor 4" H 10493 3066 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 10600 3300 50  0001 C CNN
 F 3 "~" H 10600 3300 50  0001 C CNN
 	1    10600 3300
@@ -810,7 +810,7 @@ L Connector:Conn_01x03_Female J8
 U 1 1 5CB27F92
 P 10600 4300
 F 0 "J8" H 10493 3975 50  0000 C CNN
-F 1 "Distance sensor 5" H 10493 4066 50  0000 C CNN
+F 1 "sensor 5" H 10493 4066 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 10600 4300 50  0001 C CNN
 F 3 "~" H 10600 4300 50  0001 C CNN
 	1    10600 4300
