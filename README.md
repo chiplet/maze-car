@@ -10,7 +10,7 @@ https://docs.google.com/document/d/1SaZNl0VVnFEm_aR2c8GMJGQdpziAJxaRw1_wqC6xl4o/
 - Use `helpers.ino` for helper functions for motor and distance sensors
 
 ## Hardware
-Arduino Nano
-Motor driver
-2 motors
-IR distance sensors
+- Arduino Nano
+- Motor driver
+- 2 motors
+- IR distance sensors
