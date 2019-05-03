@@ -1,3 +1,8 @@
+/* includes */
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_LSM303_U.h>
+
 /* pin definitions */
 
 // motor controller
@@ -23,6 +28,8 @@
 #define DIST_SIG_4 A6
 #define DIST_SIG_5 A7
 
+/* Assign a unique ID to this sensor at the same time */
+Adafruit_LSM303_Mag_Unified mag = Adafruit_LSM303_Mag_Unified(12345);
 
 /* pin number arrays for convenience */
 // distance sensor signal pins
@@ -88,6 +95,21 @@ void setup() {
   digitalWrite(BIN1, bin1);
   digitalWrite(BIN2, bin2);
   digitalWrite(STBY, HIGH);
+
+  /* magnetometer */
+  /* Enable auto-gain */
+  mag.enableAutoRange(true);
+
+  /* Initialise the sensor */
+  if(!mag.begin())
+  {
+    /* There was a problem detecting the LSM303 ... check your connections */
+    Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
+    while(1);
+  }
+
+  /* Display some basic information on this sensor */
+  displaySensorDetails();
 }
 
 unsigned int current_sensor = 0;
@@ -140,10 +162,38 @@ float mean(int* arr, int arrlen)
 
 
 void loop() {
-  println_sensors();
+  //println_sensors();
   
   set_motor_speed(M_LEFT, 0.1f);
   set_motor_speed(M_RIGHT, 0.1f);
 
-  delay(1);
+    sensors_event_t event;
+  mag.getEvent(&event);
+
+  float mx = event.magnetic.x;
+  float my = event.magnetic.y;
+  float mz = event.magnetic.z;
+
+  float heading = -1; // error
+
+  if (mx >= 0 && my > 0)
+  {
+    heading = atan(mx/my)*180.0f/PI;
+  }
+  else if (mx > 0 && my <= 0)
+  {
+    heading = 90 + atan(-my/mx)*180.0f/PI;
+  }
+  else if (mx <= 0 && my < 0)
+  {
+    heading = 180 + atan(mx/my)*180.0f/PI;
+  }
+  else if (mx < 0 && my >= 0)
+  {
+    heading = 270 + atan(my/-mx)*180.0f/PI;
+  }
+
+  Serial.println(String()+"x="+mx+" y="+my+" z="+mz+" Heading: "+heading);
+  
+  delay(10);
 }
