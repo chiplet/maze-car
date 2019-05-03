@@ -1,5 +1,3 @@
-// TODO: Debug why sensors 4 and 5 don't work
-
 /* pin definitions */
 
 // motor controller
@@ -15,27 +13,24 @@
 #define DIST_LED_1 2
 #define DIST_LED_2 3
 #define DIST_LED_3 4
-#define DIST_LED_4 A1
-#define DIST_LED_5 A0
-#define DIST_LED_6 13
+#define DIST_LED_4 12
+#define DIST_LED_5 13
 
 // distance sensor signal pins
-#define DIST_SIG_1 A5
-#define DIST_SIG_2 A6
-#define DIST_SIG_3 A7
-#define DIST_SIG_4 A4
-#define DIST_SIG_5 A3
-#define DIST_SIG_6 A2
+#define DIST_SIG_1 A0
+#define DIST_SIG_2 A1
+#define DIST_SIG_3 A2
+#define DIST_SIG_4 A6
+#define DIST_SIG_5 A7
 
 
 /* pin number arrays for convenience */
-
 // distance sensor signal pins
-const int sensor_pins[] = {DIST_SIG_1, DIST_SIG_2, DIST_SIG_3, DIST_SIG_4, DIST_SIG_5, DIST_SIG_6};
+const int sensor_pins[] = {DIST_SIG_1, DIST_SIG_2, DIST_SIG_3, DIST_SIG_4, DIST_SIG_5};
 const int n_sensor_pins = sizeof(sensor_pins)/sizeof(sensor_pins[0]);
 
 // distance sensor LED pins
-const int led_pins[] = {DIST_LED_1, DIST_LED_2, DIST_LED_3, DIST_LED_4, DIST_LED_5, DIST_LED_6};
+const int led_pins[] = {DIST_LED_1, DIST_LED_2, DIST_LED_3, DIST_LED_4, DIST_LED_5};
 const int n_led_pins = sizeof(led_pins)/sizeof(led_pins[0]);
 
 // array for holding latest distance sensor readings
@@ -101,7 +96,7 @@ unsigned int current_sensor = 0;
 ISR(TIMER1_COMPA_vect)
 {
   // select sensor to be used
-  if (current_sensor >= 6) current_sensor = 0;
+  if (current_sensor >= 5) current_sensor = 0;
 
   // read current sensor
   sensor_readings[current_sensor] = analogRead(sensor_pins[current_sensor]);
@@ -111,7 +106,7 @@ ISR(TIMER1_COMPA_vect)
   digitalWrite(led_pins[current_sensor], LOW);
 
   // turn next sensor on
-  digitalWrite(led_pins[current_sensor+1 <= 5 ? current_sensor+1 : 0], HIGH);
+  digitalWrite(led_pins[current_sensor+1 <= 4 ? current_sensor+1 : 0], HIGH);
 
   current_sensor++;
 }
@@ -143,66 +138,12 @@ float mean(int* arr, int arrlen)
   return sum / arrlen;
 }
 
-void flush_serial(){
-  while(Serial.available() > 0) {
-    char t = Serial.read();
-  }
-}   
-
-// frame format, start byte 'b' followed by four bytes indicating key states (ascii '1' for on, anything else for off
-
-float left_speed = 0.0f;
-float right_speed = 0.0f;
-
-char buf[10];
 
 void loop() {
-  while (!Serial.available());
-  char state = Serial.read();
-
-  char w = state & 1 << 3;
-  char a = state & 1 << 2;
-  char s = state & 1 << 1;
-  char d = state & 1 << 0;
-
-  char spd = state >> 4;
-  float f_speed = (float)spd/16.0f;
-
-  /*
-  Serial.print(w ? '1' : '0');
-  Serial.print(a ? '1' : '0');
-  Serial.print(s ? '1' : '0');
-  Serial.print(d ? '1' : '0');
-  Serial.println();
-  */
-
-  flush_serial();
-
-  left_speed = 0.0f;
-  right_speed = 0.0f;
-  if (w)
-  {
-    left_speed += f_speed;
-    right_speed += f_speed;
-  }
-  if (a)
-  {
-    left_speed -= f_speed;
-    right_speed += f_speed;
-  }
-  if (s)
-  {
-    left_speed -= f_speed;
-    right_speed -= f_speed;
-  }
-  if (d)
-  {
-    left_speed += f_speed;
-    right_speed -= f_speed;
-  }
+  println_sensors();
   
-  set_motor_speed(M_LEFT, left_speed);
-  set_motor_speed(M_RIGHT, right_speed);
+  set_motor_speed(M_LEFT, 0.1f);
+  set_motor_speed(M_RIGHT, 0.1f);
 
   delay(1);
 }

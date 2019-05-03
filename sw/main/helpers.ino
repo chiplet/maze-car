@@ -1,7 +1,5 @@
 #include <ArduinoSTL.h>
 
-
-
 // print adc readings from all distance sensor pins
 void print_sensors()
 {
@@ -12,6 +10,16 @@ void print_sensors()
   }
   printf("\n");
 }
+
+void println_sensors()
+{
+  for (int i = 0; i < n_sensor_pins; i++)
+  {
+    printf("%d, ", sensor_readings[i]);
+  }
+  printf("\n");
+}
+
 
 // set given motor to spin at given rate
 // positive values -> forward, negative values -> backward

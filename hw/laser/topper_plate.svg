@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="topper_plate.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.0184595"
+     inkscape:cx="111.19828"
+     inkscape:cy="150.95632"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:measure-start="-130.31,170.716"
+     inkscape:measure-end="212.5,-2.5"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3713"
+       width="59.857822"
+       height="79.857826"
+       x="0.071088277"
+       y="217.07109" />
+    <g
+       id="g4536"
+       transform="translate(2.2175,-2.6674905)">
+      <g
+         id="g1379"
+         transform="translate(3,-3.250011)">
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path3719"
+           cx="-0.68479466"
+           cy="298.1348"
+           r="1.4827054" />
+        <circle
+           r="1.4827054"
+           cy="227.73479"
+           cx="-0.68479466"
+           id="circle4526"
+           style="fill:none;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+        <circle
+           r="1.4827054"
+           cy="298.1348"
+           cx="50.315205"
+           id="circle4528"
+           style="fill:none;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="circle4530"
+           cx="50.315205"
+           cy="227.73479"
+           r="1.4827054" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.26458332"
+       x="21.611462"
+       y="294.03"
+       id="text4540"><tspan
+         sodipodi:role="line"
+         id="tspan4538"
+         x="21.611462"
+         y="294.03"
+         style="font-size:2.82222223px;fill:none;stroke:#ff0000;stroke-width:0.26458332">Mazeblazer</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.09868367;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1423"
+       width="5.9013166"
+       height="9.9013166"
+       x="1.0493418"
+       y="252.04935" />
+    <rect
+       y="252.04935"
+       x="53.049343"
+       height="9.9013166"
+       width="5.9013166"
+       id="rect1425"
+       style="fill:none;stroke:#000000;stroke-width:0.09868367;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+</svg>
