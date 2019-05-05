@@ -13,6 +13,7 @@ https://docs.google.com/document/d/1SaZNl0VVnFEm_aR2c8GMJGQdpziAJxaRw1_wqC6xl4o/
 ## Software
 - Use `main.cpp` for the bluetooth controller
 - Use `helpers.ino` for helper functions for motor and distance sensors
+- Use `main.ino` for the main function of the task
 
 ## Hardware
 - Arduino Nano
