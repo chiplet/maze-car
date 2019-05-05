@@ -1,23 +1,11 @@
 #include <ArduinoSTL.h>
 
-// print adc readings from all distance sensor pins
 void print_sensors()
-{
-  printf("Distance sensor readings:\n");
-  for (int i = 0; i < n_sensor_pins; i++)
-  {
-    printf("  [%d] = %d\n", i, analogRead(sensor_pins[i]));
-  }
-  printf("\n");
-}
-
-void println_sensors()
 {
   for (int i = 0; i < n_sensor_pins; i++)
   {
     printf("%d, ", sensor_readings[i]);
   }
-  printf("\n");
 }
 
 void displaySensorDetails(void)
@@ -50,7 +38,7 @@ void set_motor_speed(enum motors motor, float value)
   int bin1 = 0;
   int bin2 = 1; 
   
-  if (motor == M_LEFT)
+  if (motor == M_RIGHT)
   {
     if (value < 0)
     {
@@ -63,7 +51,7 @@ void set_motor_speed(enum motors motor, float value)
     analogWrite(PWMA, value*255);
   }
 
-  if (motor == M_RIGHT)
+  if (motor == M_LEFT)
   {
     if (value < 0)
     {

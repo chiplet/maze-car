@@ -109,7 +109,7 @@ void setup() {
   }
 
   /* Display some basic information on this sensor */
-  displaySensorDetails();
+  // displaySensorDetails();
 }
 
 unsigned int current_sensor = 0;
@@ -161,13 +161,11 @@ float mean(int* arr, int arrlen)
 }
 
 
-void loop() {
-  //println_sensors();
-  
-  set_motor_speed(M_LEFT, 0.1f);
-  set_motor_speed(M_RIGHT, 0.1f);
+void loop() {  
+  // set_motor_speed(M_LEFT, 0.3f);
+  // set_motor_speed(M_RIGHT, 0.3f);
 
-    sensors_event_t event;
+  sensors_event_t event;
   mag.getEvent(&event);
 
   float mx = event.magnetic.x;
@@ -193,7 +191,8 @@ void loop() {
     heading = 270 + atan(my/-mx)*180.0f/PI;
   }
 
-  Serial.println(String()+"x="+mx+" y="+my+" z="+mz+" Heading: "+heading);
+  print_sensors();
+  Serial.println(heading);
   
   delay(10);
 }
