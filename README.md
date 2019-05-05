@@ -20,4 +20,5 @@ https://docs.google.com/document/d/1SaZNl0VVnFEm_aR2c8GMJGQdpziAJxaRw1_wqC6xl4o/
 - Motor driver
 - 2 motors
 - 5 IR distance sensors
+- Magnetometer
 
