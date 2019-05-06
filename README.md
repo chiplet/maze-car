@@ -4,11 +4,8 @@ The link below has instructions for the task:
 https://docs.google.com/document/d/1SaZNl0VVnFEm_aR2c8GMJGQdpziAJxaRw1_wqC6xl4o/edit?usp=sharing
 
 ## Getting Started
-- Download git for windows/linux/macOS
-- Use command `git clone URL of the repository` to download a copy of the repository on your machine
-- Use command `git status` to view the current status of the repository and files that are staged or unstaged to be committed
-- Use command `git add (filename)` to either create a new file or modify a file to be committed
-- Use command `git commit` to commit the changes made previously and upload to the repository
+- Download git for windows/linux/macOS from https://git-scm.com/downloads
+- Use command `git clone https://github.com/VerkkuUkkeli/maze-car` to download a copy of the repository to your machine
 
 ## Software
 - Use `main.cpp` for the bluetooth controller
