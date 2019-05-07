@@ -4,7 +4,6 @@
 #include <Adafruit_LSM303_U.h>
 
 /* pin definitions */
-
 // motor controller
 #define PWMA 5
 #define AIN2 6
@@ -76,10 +75,11 @@ void setup() {
   // enable interrupts
   sei();
 
-  
-  // Serial debug connection
+
+  /* Serial debug connection */
   Serial.begin(115200);
 
+  /* initialise GPIO pins */
   for (int i = 0; i < n_sensor_pins; i++)
   {
     pinMode(sensor_pins[i], INPUT);
@@ -96,103 +96,41 @@ void setup() {
   digitalWrite(BIN2, bin2);
   digitalWrite(STBY, HIGH);
 
-  /* magnetometer */
-  /* Enable auto-gain */
+  /* initialise magnetometer */
+  // enable auto gain
   mag.enableAutoRange(true);
-
-  /* Initialise the sensor */
+  
   if(!mag.begin())
   {
-    /* There was a problem detecting the LSM303 ... check your connections */
     Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
     while(1);
   }
-
-  /* Display some basic information on this sensor */
-  // displaySensorDetails();
 }
 
-unsigned int current_sensor = 0;
+void loop() {
+  /*** WRITE YOUR MAZE SOLVING APPLICATION CODE HERE ***/
 
-// interrupt service routine for timer1
-ISR(TIMER1_COMPA_vect)
-{
-  // select sensor to be used
-  if (current_sensor >= 5) current_sensor = 0;
-
-  // read current sensor
-  sensor_readings[current_sensor] = analogRead(sensor_pins[current_sensor]);
-  delay(1);
-
-  // turn current sensor off
-  digitalWrite(led_pins[current_sensor], LOW);
-
-  // turn next sensor on
-  digitalWrite(led_pins[current_sensor+1 <= 4 ? current_sensor+1 : 0], HIGH);
-
-  current_sensor++;
-}
-
-int min_index(int* arr, int arrlen)
-{
-  int min_index = 0;
-  for (int i = 0; i < arrlen; i++)
+  // simple example which uses the front sensor to detect obstacles and change direction
+  /*
+  if (get_distance_sensor(1) > 700)
   {
-    if (arr[i] < arr[min_index]) min_index = i;
+    set_motor_speed(M_LEFT, 0.0f);
+    set_motor_speed(M_RIGHT, 0.0f);
+    delay(1000);
+    set_motor_speed(M_LEFT, 0.4f);
+    set_motor_speed(M_RIGHT, -0.4f);
+    delay(300);
+    set_motor_speed(M_LEFT, 0.0f);
+    set_motor_speed(M_RIGHT, 0.0f);
+    delay(1000);
+    set_motor_speed(M_LEFT, 0.25f);
+    set_motor_speed(M_RIGHT, 0.25f);
   }
-  return min_index;
-}
-
-int max_index(int* arr, int arrlen)
-{
-  int max_index = 0;
-  for (int i = 0; i < arrlen; i++)
+  else
   {
-    if (arr[i] > arr[max_index]) max_index = i;
+    set_motor_speed(M_LEFT, 0.25f);
+    set_motor_speed(M_RIGHT, 0.25f);
   }
-  return max_index;
-}
-
-float mean(int* arr, int arrlen)
-{
-  float sum = 0;
-  for (int i = 0; i < arrlen; i++) sum += arr[i];
-  return sum / arrlen;
-}
-
-
-void loop() {  
-  // set_motor_speed(M_LEFT, 0.3f);
-  // set_motor_speed(M_RIGHT, 0.3f);
-
-  sensors_event_t event;
-  mag.getEvent(&event);
-
-  float mx = event.magnetic.x;
-  float my = event.magnetic.y;
-  float mz = event.magnetic.z;
-
-  float heading = -1; // error
-
-  if (mx >= 0 && my > 0)
-  {
-    heading = atan(mx/my)*180.0f/PI;
-  }
-  else if (mx > 0 && my <= 0)
-  {
-    heading = 90 + atan(-my/mx)*180.0f/PI;
-  }
-  else if (mx <= 0 && my < 0)
-  {
-    heading = 180 + atan(mx/my)*180.0f/PI;
-  }
-  else if (mx < 0 && my >= 0)
-  {
-    heading = 270 + atan(my/-mx)*180.0f/PI;
-  }
-
-  print_sensors();
-  Serial.println(heading);
-  
-  delay(10);
+  delay(5);
+  */
 }
