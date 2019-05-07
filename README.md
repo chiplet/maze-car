@@ -12,6 +12,11 @@ https://docs.google.com/document/d/1SaZNl0VVnFEm_aR2c8GMJGQdpziAJxaRw1_wqC6xl4o/
 3. Install the following Arduino libraries from Sketch -> Include Library -> Manage Libraries menu in the arduino IDE
 - Adafruit Unified Sensor
 - Adafruit LSM303DLHC
+4. Tell the Arduino IDE what board is being used from the Tools menu
+- Board: Arduino Nano
+- Processor: ATmega328P (Old Bootloader)
+- Port: wchusbserial
+
 
 ## Software
 - `main.ino` contains the arduino setup and loop code. Write your maze solving application into this file.
