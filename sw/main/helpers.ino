@@ -75,7 +75,7 @@ int get_distance_sensor(int index)
 {
   if (index < 0 || index >= 5)
   {
-    Serial.println("Error! Distance sensor index out of bounds! Index needs to be a value between 0 and 5.");
+    Serial.println("Error! Distance sensor index out of bounds! Index needs to be a value between 0 and 4.");
     return -1;
   }
   return sensor_readings[index];
