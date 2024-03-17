@@ -43,7 +43,6 @@ void set_motor_speed(enum motors motor, float value)
 
   if (motor == M_RIGHT)
   {
-    value += 0.04; // increase right motor speed to compensate for turning
     if (value < 0)
     {
       ain1 = !ain1;

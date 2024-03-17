@@ -107,30 +107,83 @@ void setup() {
   }
 }
 
-void loop() {
-  /*** WRITE YOUR MAZE SOLVING APPLICATION CODE HERE ***/
+// status flags
+bool moving = true; // is the car moving through a corridor
+bool right_open = false;
+bool left_open = false;
+bool bright_open = false;
+bool bleft_open = false;
 
-  // simple example which uses the front sensor to detect obstacles and change direction
-  /*
-  if (get_distance_sensor(1) > 700)
+// global vars
+float left_speed = 0.2f;
+float right_speed = 0.2f;
+
+// tunnel driving
+float centering_coeff = 0.0003f;
+
+// edge detection
+int previous_readings[5] = {512, 512, 512, 512, 512};
+int prev_millis = 0;
+
+// save previous readings
+void save_previous()
+{
+  for (int i = 0; i < 5; i++)
   {
+    previous_readings[i] = sensor_readings[i];
+  }
+}
+
+void loop() {
+  // experimental edge detector
+  int dt = millis() - prev_millis;
+  prev_millis = millis();
+
+  int diff1 = (sensor_readings[2] - previous_readings[2])/(float(prev_millis)/1000.0f)*100;
+
+  save_previous();
+  
+  print_sensors();
+  Serial.println(diff1);
+
+  if (moving)
+  { 
+    // try to centre the car in a tunnel
+    int left_dist = sensor_readings[0];
+    int right_dist = sensor_readings[2];
+    if (left_dist > right_dist)
+    {
+      float diff_dist = (left_dist - right_dist)*centering_coeff;
+      set_motor_speed(M_LEFT, left_speed+diff_dist);
+      set_motor_speed(M_RIGHT, right_speed-diff_dist);
+    }
+    else if (right_dist > left_dist)
+    {
+      float diff_dist = (right_dist - left_dist)*centering_coeff;
+      set_motor_speed(M_LEFT, left_speed-diff_dist);
+      set_motor_speed(M_RIGHT, right_speed+diff_dist);
+    }
+  }
+
+    /* detect branches */
+  if (sensor_readings[2] < 600) right_open = true;
+  if (sensor_readings[0] < 600) left_open = true;
+  if (sensor_readings[4] < 600) bright_open = true;
+  if (sensor_readings[3] < 600) bleft_open = true;
+
+  // select tunnel
+  if (right_open || left_open)
+  {
+    // move forward until back sensor agrees
+    
+  }
+
+  // PANIC!
+  if (sensor_readings[1] > 900)
+  {
+    Serial.println("PANIC!!!");
     set_motor_speed(M_LEFT, 0.0f);
     set_motor_speed(M_RIGHT, 0.0f);
-    delay(1000);
-    set_motor_speed(M_LEFT, 0.4f);
-    set_motor_speed(M_RIGHT, -0.4f);
-    delay(300);
-    set_motor_speed(M_LEFT, 0.0f);
-    set_motor_speed(M_RIGHT, 0.0f);
-    delay(1000);
-    set_motor_speed(M_LEFT, 0.25f);
-    set_motor_speed(M_RIGHT, 0.25f);
   }
-  else
-  {
-    set_motor_speed(M_LEFT, 0.25f);
-    set_motor_speed(M_RIGHT, 0.25f);
-  }
-  delay(5);
-  */
+  
 }
